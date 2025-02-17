@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>orelya</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;600&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Josefin Sans', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+            color: #333;
+        }
+
+        h1,h2,h3,p{
+            font-family: 'Josefin Sans',sans-serif
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .brand-logo {
+            height: 50px;
+            margin-left: 50px; /* 2cm 右に移動 */
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+        nav ul li {
+            margin: 0 15px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+        }
+        .hero {
+            position: relative;
+            text-align: center;
+            padding-top: 50px;
+        }
+        .hero img {
+            width: 60%;
+            height: auto;
+        }
+         /* 横スクロールのスタイル */
+        .scrolling-images {
+            display: flex;
+            overflow: hidden; /* コンテナ外に出た部分は非表示 */
+        }
+        .scrolling-images img {
+            width: 100%;
+            height: auto;
+            flex-shrink: 0; /* 画像の縮小を防止 */
+        }
+        @keyframes scrolling {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(-100%); /* 画像を左にスライド */
+            }
+        }
+
+        .scrolling-images-wrapper {
+            display: flex;
+            animation: scrolling 20s linear infinite; /* 横に20秒でスクロール */
+            width: 500px;
+        }
+
+        .collection, .about, .contact {
+            padding: 50px;
+            text-align: center;
+        
+
+        .collection, .about, .contact {
+            padding: 50px;
+            text-align: center;
+        }
+        .items {
+            display: flex;
+            justify-content: center; /* アイテムを中央に配置 */
+            align-items: center; /* アイテムを縦方向でも中央に配置 */
+            gap: 70px;
+            padding: 20px;
+            overflow-x: auto;
+            white-space: nowrap;
+        }
+        .item {
+            flex: 0 0 auto;
+            width: 200px;
+            text-align: center;
+        }
+        .item a {
+            display: block; /* <a>タグをブロック要素にして中央揃え */
+            width: 100%;    /* <a>タグの幅を親要素の幅に合わせる */
+            text-decoration: none; /* 下線を消す */
+        }
+        .item img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin: 0 auto;  /* 画像を中央に配置 */
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="buranndorogo.jpg" alt="ブランドロゴ" class="brand-logo">
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#collection">Collection</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="scrolling-images">
+            <div class="scrolling-images-wrapper">
+                <img src="ime-zi.jpg" alt="ブランド画像1">
+                <img src="ime-zi2.jpg" alt="ブランド画像2">
+                <img src="ime-zi3.jpg" alt="ブランド画像3">
+                <img src="ime-zi.jpg" alt="ブランド画像1">
+                <img src="ime-zi2.jpg" alt="ブランド画像2">
+                <img src="ime-zi3.jpg" alt="ブランド画像3">
+            </div>
+        </div>
+    </section>
+
+    <section id="collection" class="collection">
+        <h2>Collection</h2>
+        <div class="items">
+            <div class="item">
+                <a href="リンク先のURL">
+                    <img src="item-03.png" alt="tops">
+                </a>
+                <p>Tops</p>
+            </div>
+            <div class="item">
+                <a href="リンク先のURL">
+                    <img src="item-02.png" alt="pants">
+                </a>
+                <p>Pants</p>
+            </div>
+            <div class="item">
+                <a href="リンク先のURL">
+                    <img src="item-01.png" alt="goods">
+                </a>
+                <p>Goods</p>
+            </div>
+        </div>
+         <!-- MOREボタン -->
+    <div class="more-button">
+        <a href="more-page.html" class="button">more</a>
+    </div>
+
+    <style>
+    .more-button {
+        text-align: center; /* ボタンを中央揃え */
+        margin-top: 20px; /* 上部に少しスペースを追加 */
+    }
+
+    .button {
+        padding: 15px 50px; /* ボタンの内側の余白 */
+        background-color: #333; /* 背景色 */
+        color: white; /* 文字色 */
+        font-size: 16px; /* フォントサイズ */
+        font-weight: bold; /* 太字 */
+        border: none; /* ボーダーなし */
+        border-radius: 5px; /* 角丸 */
+        text-align: center; /* 文字を中央揃え */
+        transition: background-color 0.3s ease; /* ホバー時の色変更アニメーション */
+        text-decoration: none; /* 下線を消す */
+
+    }
+
+    .button:hover {
+        background-color: #555; /* ホバー時の背景色 */
+
+    }
+</style>
+
+
+
+    </section>
+
+
+    <section id="all item" class="collection">
+    <h2>All item</h2>
+
+    <!-- 商品リスト -->
+    <div class="product-list">
+        <div class="product-item">
+            <a href="リンク先1.html">
+                <img src="00-01.png" alt="商品1">
+                <p>0000</p>
+            </a>
+        </div>
+        <div class="product-item">
+            <a href="リンク先2.html">
+                <img src="00-02.png" alt="商品2">
+                <p>0000</p>
+            </a>
+        </div>
+        <div class="product-item">
+            <a href="リンク先3.html">
+                <img src="00-03.png" alt="商品3">
+                <p>0000</p>
+            </a>
+        </div>
+        <div class="product-item">
+            <a href="リンク先4.html">
+                <img src="00-04.png" alt="商品4">
+                <p>0000</p>
+            </a>
+        </div>
+        <div class="product-item">
+            <a href="リンク先5.html">
+                <img src="00-05.png" alt="商品5">
+                <p>0000</p>
+            </a>
+        </div>
+    </div>
+
+    <div class="more-button">
+        <a href="more-page.html" class="button">MORE</a>
+    </div>
+
+</section>
+
+<style>
+    .more-button {
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .button {
+        padding: 15px 40px;
+        background-color: #333;
+        color: white;
+        font-size: 16px;
+        font-weight: bold;
+        border: none;
+        border-radius: 5px;
+        text-align: center;
+        transition: background-color 0.3s ease;
+        text-decoration: none;
+        display: inline-block;
+    }
+
+    .button:hover {
+        background-color: #555;
+    }
+
+    .product-list {
+        display: flex;
+        justify-content: space-between; /* 均等配置 */
+        align-items: center;
+        flex-wrap: wrap; /* 画面幅が狭い時に折り返す */
+        gap: 20px;
+        padding: 20px 0;
+    }
+
+    .product-item {
+        flex: 1; /* 均等に配置 */
+        max-width: 18%; /* 5つが均等に並ぶように調整 */
+        text-align: center;
+    }
+
+    .product-item img {
+        width: 100%; /* コンテナに合わせる */
+        height: auto;
+        border-radius: 5px;
+    }
+
+    .product-item p {
+        margin-top: 5px;
+        font-size: 14px;
+    }
+
+
+
+    /* MOREボタンの位置調整 */
+    .more-button {
+        text-align: center;
+        margin-top: 30px; /* 商品リストとの間隔を調整 */
+    }
+
+    .button {
+        padding: 15px 40px;
+        background-color: #333;
+        color: white;
+        font-size: 16px;
+        font-weight: bold;
+        border: none;
+        border-radius: 5px;
+        text-align: center;
+        transition: background-color 0.3s ease;
+        text-decoration: none;
+        display: inline-block;
+    }
+
+    .button:hover {
+        background-color: #555;
+    }
+
+
+    @media (max-width: 800px) {
+        .product-item {
+            max-width: 30%; /* 画面幅が狭い場合は3列に */
+        }
+    }
+
+    @media (max-width: 500px) {
+        .product-item {
+            max-width: 48%; /* 画面幅がさらに狭い場合は2列に */
+        }
+    }
+</style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <section id="about" class="about">
+        <h2>About Us</h2>
+         <p>Fashion means keeping things simple.</p>
+         <p>Owning just a few high-quality items can change your value and the way you see yourself.</p>
+         <p>物事をシンプルにすること</p>
+         <p>高品質のものを少数だけ所有するアイテムはあなたの価値観や自分自身の見方を変えることができます。</p>
+         <p>........ </p>
+         <p>私たちは機能性でよりシンプルを追求します。</p>
+          
+    </section>
+
+    <section id="contact" class="contact">
+    <h2>Contact</h2>
+    <p><a href="mailto:orelya@brand.com"class="contact-link">orelya@brand.com</a></p>
+
+    <!-- リンクと画像1 -->
+    <a href="リンク先1.html" class="contact-item button">
+        <p>Instagram</p>
+    </a>
+
+    <!-- リンクと画像2 -->
+    <a href="リンク先2.html" class="contact-item button">
+        <p>Facebook</p>
+    </a>
+
+    <!-- リンクと画像3 -->
+    <a href="リンク先3.html" class="contact-item button">
+        <p>Mail</p>
+    </a>
+</section>
+
+<style>
+    p {
+        font-size: 14px;
+        font-family: 'Arial', sans-serif;
+        color: #333;
+        line-height: 1.6;
+        margin-bottom: 10px;
+        text-align: center; /* 中央揃え */
+    }
+    .contact-link {
+        color: black; /* メールリンクの色を黒に設定 */
+        text-decoration: none; /* 下線を消す */
+    }
+
+    .contact {
+        text-align: center; /* <section>内のコンテンツを中央揃えに */
+        padding: 10px;
+    }
+
+    .contact-item {
+        display: inline-flex; /* <a>タグをflexで横並びに */
+        flex-direction: column; /* 画像と文字を縦に並べる */
+        align-items: center; /* 画像と文字を中央に配置 */
+        margin: 10px; /* アイテム間のスペース */
+        text-decoration: none; /* 下線を消す */
+    }
+
+    .contact-item p {
+        margin: 0; /* 段落の余白をリセット */
+        font-size: 14px; /* 文字サイズの設定 */
+    }
+    .button {
+        padding: 10px 20px; /* ボタンの内側の余白 */
+        background-color: #777; /* 背景色 */
+        color: white; /* 文字色 */
+        font-size: 16px; /* フォントサイズ */
+        font-weight: bold; /* 太字 */
+        border: none; /* ボーダーなし */
+        border-radius: 5px; /* 角丸 */
+        text-align: center; /* 文字を中央揃え */
+        transition: background-color 0.3s ease; /* ホバー時の色変更アニメーション */
+        width: 20%;
+    }
+
+    .button:hover {
+        background-color: #555; /* ホバー時の背景色 */
+    }
+
+</style>
+
+
+
+    <footer>
+        <img src="footer.jpg" alt="Footer Logo" class="footer-logo">
+        <p>&copy; 2025 Orelya</p>
+    </footer>
+
+    
+    <style>
+    footer {
+        text-align: center; /* <footer>内のすべてのコンテンツを中央揃えに */
+        padding: 50px;
+        color: white;
+    }
+
+    .footer-logo {
+        width: 300px; /* 画像の幅を50pxに設定 */
+        height: auto; /* 高さは自動調整 */
+        margin-top: 5px; /* 画像の上に少しスペースを追加 */
+    }
+</style>
+</body>
+</html>
